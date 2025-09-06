@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-	var userHeight float64
 	var userWeight float64
-	userWeight, userHeight = getUserInput(userWeight, userHeight)
+	var userHeight float64
 	fmt.Println("___ Калькулятор индекса массы ___")
+	userWeight, userHeight = getUserInput(userWeight, userHeight)
 	IMT := calculateIMT(userWeight, userHeight)
 	outputResult(IMT)
 }
