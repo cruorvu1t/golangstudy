@@ -7,8 +7,8 @@ import (
 
 func main() {
 	const IMTpower = 2
-	userHeight := 1.8
-	userWeigt := 100.0
+	var userHeight float64
+	var userWeigt float64
 	fmt.Println("___ Калькулятор индекса массы ___")
 	fmt.Print("Введите свой рост в сантиметрах: ")
 	fmt.Scan(&userHeight)
