@@ -6,51 +6,75 @@ import (
 
 func main() {
 
-	sunny := true
+	subscribed := false
+	
+	fmt.Println("До условия", subscribed)
+	
+		if !subscribed {
+		fmt.Println("Я вижу ты не подписан. Подпишись пожалуйста!")
+	}
+	
+	
+//	if subscribed {
+//
+//	} else {
+//		fmt.Println("Я вижу ты не подписан. Подпишись пожалуйста!")
+//		}
+	
+	fmt.Println("после условия", subscribed)
+
+/*	sunny := true
 	weekend := false
 
-	if sunny && weekend {
+	if sunny && weekend{
 		fmt.Println("Я иду гулять")
-	} else {
-		fmt.Println("Я сопртивляюсь")
-	}
-
+		} else {
+			fmt.Println("Я сопротивляюсь")
+		}
+	
 	computerClub := true
 	icecream := false
-
+	
 	if computerClub || icecream {
-		fmt.Println("Я иду гулять")
+		fmt.Println("Я иду гулять")	
+		} else {
+			fmt.Println("Я сопротивляюсь")
+		} */
+		
+/*	score := 5
+	if score > 6 && score < 15 {
+		fmt.Println("Ты попал в яблочко!")
+		} else {
+			fmt.Println("Ты не попал в яблочко")
+			}
+		
+
+
+
+
+
+//	score := 21
+	if score <6 || score > 16{
+	fmt.Println("Ты попал в зону")
 	} else {
-		fmt.Println("Я сопртивляюсь")
-	}
-
-	/*	score := 5
-			if score > 6 && score < 15 {
-				fmt.Println("Ты попал в яблочко!")
-				} else {
-					fmt.Println("Ты не попал в яблочко")
-					}
-
-
-
-
-
-
-		//	score := 21
-			if score <6 || score > 16{
-			fmt.Println("Ты попал в зону")
-			} else {
-				fmt.Println("Ты не попал в зону")
-				}
+		fmt.Println("Ты не попал в зону")
+		}
 	*/
 
-	/*	number := 15
 
-		ravno5 := number == 5
-		bolshe12 := number > 12
 
-		fmt.Println(ravno5)
-		fmt.Println(bolshe12)*/
+
+
+
+
+
+/*	number := 15
+
+	ravno5 := number == 5
+	bolshe12 := number > 12
+
+	fmt.Println(ravno5)
+	fmt.Println(bolshe12)*/
 
 	/*score := 50
 
