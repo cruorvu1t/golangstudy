@@ -1,34 +1,145 @@
 package main
 
+/*
 import (
 	"fmt"
+	//"time"
+	//"math/rand"
 )
 
 func main() {
 
-	fmt.Println("Начинаю генерацию уровня")
-	fmt.Println("")
+	for i := 1; i <= 5; i++ {
+		fmt.Println("Итерация", i)
+
+		if i == 3 {
+			break
+		}
+	}
+*/
+
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+func main() {
 
 	//🐤
 	//🟩
 	//🟥
 
-	for i := 1; i <= 5; i++ {
+	score := 0
 
-		fmt.Println("Труба №", i)
-		fmt.Println("----")
-		if i%2 == 0 {
-			fmt.Println("🟥🟥")
-		} else {
-			fmt.Println("🟩🟩")
-		}
-		fmt.Println("----")
+	fmt.Println("Get ready!")
+	fmt.Println("Счёт:", score)
+	fmt.Println("")
 
+	for {
+
+		fmt.Println("------------------------------")
 		fmt.Println("")
+		fmt.Println("Подлетаю к трубе!")
+		fmt.Println("🐤🟩🟩")
+		fmt.Println("")
+
+		fmt.Println("Пролетаю через трубу!")
+		fmt.Println("🟩🐤🟩")
+		fmt.Println("")
+
+		if rand.Intn(8) == 1 {
+			fmt.Println("Я врезался в трубу :(")
+			fmt.Println("🟩🟥🟩")
+			fmt.Println("")
+			break
+		}
+
+		fmt.Println("Пролетел через трубу!")
+		fmt.Println("🟩 🟩 🐤")
+		fmt.Println("")
+
+		score++
+		fmt.Println("Счёт:", score)
+		fmt.Println("------------------------------")
+		fmt.Println("")
+		time.Sleep(1 * time.Second)
 	}
 
-	fmt.Println("Генерация уровня закончена")
+	fmt.Println("Game over!")
+	fmt.Println("Ваш итоговый счёт", score)
 
+	/*
+	   import (
+	   	"fmt"
+	   	"time"
+	   )
+
+	   func main() {
+
+	   	for i := 1; i <= 5; i++ {
+	   		fmt.Println("Новая итерация! i:", i)
+	   		time.Sleep(1000 * time.Millisecond)
+	   		}
+	*/
+	/*
+	   import (
+	   	"fmt"
+	   	"math/rand"
+	   )
+
+	   	// "math/rand"
+	   	// "time"
+	   	// 1. Бесконечные циклы
+	   	// 2. Ключевое слово break
+
+	   func main() {
+
+	   	fmt.Println("Hello World!")
+	   	fmt.Println("Рандомная цифра", rand.Intn(10))
+	   	fmt.Println("")
+
+	   	// 0 1
+	   	if rand.Intn(4) == 1 {
+	   		fmt.Println("Я сгенерировал рандомно число один!")
+	   		} else {
+	   			fmt.Println("Я не попал в единицу(")
+	   			}
+	*/
+
+	/*package main
+
+	  import (
+	  	"fmt"
+	  )
+
+
+	  func main() {
+
+	  fmt.Println("Начинаю генерацию уровня")
+	  fmt.Println("")
+
+	  //🐤
+	  //🟩
+	  //🟥
+
+	  	for i:=1; i <=5; i++ {
+
+	  	fmt.Println("Труба №", i)
+	  	fmt.Println("----")
+	  	if i % 2 == 0 {
+	  		fmt.Println("🟥🟥")
+	  	} else {
+	  	fmt.Println("🟩🟩")
+	  	}
+	  	fmt.Println("----")
+
+
+	  	fmt.Println("")
+	  	}
+
+	  	fmt.Println("Генерация уровня закончена")
+	*/
 	/*
 	   score := 0
 
