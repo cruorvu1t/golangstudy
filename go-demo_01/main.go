@@ -6,32 +6,108 @@ import (
 
 func main() {
 
-	fmt.Println("Hello, World!")
+	fmt.Println("Начинаю генерацию уровня")
+	fmt.Println("")
 
-	fmt.Println("Hello, World!")
+	//🐤
+	//🟩
+	//🟥
 
-	subscribed := false
+	for i := 1; i <= 5; i++ {
 
-	fmt.Println("До условия", subscribed)
+		fmt.Println("Труба №", i)
+		fmt.Println("----")
+		if i%2 == 0 {
+			fmt.Println("🟥🟥")
+		} else {
+			fmt.Println("🟩🟩")
+		}
+		fmt.Println("----")
 
-	if !subscribed {
-
-		fmt.Println("Я вижу ты не подписан. Подпишись пожалуйста!")
-
+		fmt.Println("")
 	}
 
-	//	if subscribed {
+	fmt.Println("Генерация уровня закончена")
 
-	//
+	/*
+	   score := 0
 
-	//	} else {
+	   fmt.Println("Get Ready")
+	   fmt.Println("Счёт:", score)
+	   fmt.Println("")
 
-	//		fmt.Println("Я вижу ты не подписан. Подпишись пожалуйста!")
+	   //🐤
+	   //🟩
 
-	//		}
+	   	for i:=1; i <=5; i++ {
 
-	fmt.Println("после условия", subscribed)
+	   	fmt.Println("------------------------------")
+	   	fmt.Println("Вы подлетаете к трубе!", i)
+	   	fmt.Println("🐤 🟩 🟩")
+	   	fmt.Println("")
 
+	   	fmt.Println("Вы пролетаете через трубу!", i)
+	   	fmt.Println("🟩🐤🟩")
+	   	fmt.Println("")
+
+	   	fmt.Println("Вы пролетели через трубу!", i)
+	   	fmt.Println("🟩 🟩 🐤")
+	   	fmt.Println("")
+
+	   	score++
+
+	   	fmt.Println("Счёт:", score)
+	   	fmt.Println("")
+	   	}
+	*/
+
+	/*
+		number:=999
+
+		fmt.Println("До", number)
+
+		for i:=1; i <=10; i+=2 {
+			score:=5
+
+			fmt.Println("Итерация №", i)
+			fmt.Println("Score", score)
+			fmt.Println("")
+
+			score = score + 3
+
+			number++
+			}
+
+		fmt.Println("После", number)
+	*/
+
+	/*
+		fmt.Println("Hello, World!")
+
+		fmt.Println("Hello, World!")
+
+		subscribed := false
+
+		fmt.Println("До условия", subscribed)
+
+		if !subscribed {
+
+			fmt.Println("Я вижу ты не подписан. Подпишись пожалуйста!")
+
+		}
+
+		//	if subscribed {
+
+		//
+
+		//	} else {
+
+		//		fmt.Println("Я вижу ты не подписан. Подпишись пожалуйста!")
+
+		//		}
+
+		fmt.Println("после условия", subscribed)
+	*/
 	/*	sunny := true
 
 
