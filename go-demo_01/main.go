@@ -1,73 +1,168 @@
 package main
 
-/*
-import (
-	"fmt"
-	//"time"
-	//"math/rand"
-)
+import "fmt"
 
 func main() {
 
-	for i := 1; i <= 5; i++ {
-		fmt.Println("Итерация", i)
+	number1 := 5
+	number2 := 10
+	text := "Привет, земляне!"
 
-		if i == 3 {
-			break
-		}
-	}
-*/
-
-import (
-	"fmt"
-	"math/rand"
-	"time"
-)
-
-func main() {
-
-	//🐤
-	//🟩
-	//🟥
-
-	score := 0
-
-	fmt.Println("Get ready!")
+	score := 5
 	fmt.Println("Счёт:", score)
+
+	fmt.Println("До вызова функции")
+	fmt.Println("")
+	hello()
+	fmt.Println("После вызова функции")
+	fmt.Println("")
+	aboba()
+
+	fmt.Println("Вызываю функцию square(5)")
+	square(5)
+	fmt.Println("Закончил выполнение square(5)")
 	fmt.Println("")
 
-	for {
+	fmt.Println("Вызываю функцию square(10)")
+	square(10)
+	fmt.Println("Закончил выполнение square(10)")
 
-		fmt.Println("------------------------------")
-		fmt.Println("")
-		fmt.Println("Подлетаю к трубе!")
-		fmt.Println("🐤🟩🟩")
-		fmt.Println("")
+	fmt.Println("")
 
-		fmt.Println("Пролетаю через трубу!")
-		fmt.Println("🟩🐤🟩")
-		fmt.Println("")
+	fmt.Println("Вызываю функцию square(3)")
+	square(3)
+	fmt.Println("Закончил выполнение square(3)")
+	fmt.Println("")
 
-		if rand.Intn(8) == 1 {
-			fmt.Println("Я врезался в трубу :(")
-			fmt.Println("🟩🟥🟩")
-			fmt.Println("")
-			break
-		}
+	officiantWork("Иван")
+	officiantWork("Олег")
+	officiantWork("Василий")
 
-		fmt.Println("Пролетел через трубу!")
-		fmt.Println("🟩 🟩 🐤")
-		fmt.Println("")
+	sum(1, 2, "Приветствую вас!")
+	sum(10, 33, "Как дела друзья?")
+	sum(number1, number2, text)
+}
 
-		score++
-		fmt.Println("Счёт:", score)
-		fmt.Println("------------------------------")
-		fmt.Println("")
-		time.Sleep(1 * time.Second)
-	}
+// Допустим мы работаем официантом в ресторане
+// и у нас задача:
+// для каждого нового гостя нужно:
+// 1. накрыть ему стол
+// 2. поприветсвовать по имени
+// 3. принять заказ
+// 4. принести блюдо
 
-	fmt.Println("Game over!")
-	fmt.Println("Ваш итоговый счёт", score)
+func sum(a int, b int, greeting string) {
+	s := a + b
+
+	fmt.Println(greeting)
+
+	fmt.Println("Сумма а + б =", s)
+	fmt.Println("")
+}
+
+func officiantWork(name string) {
+	fmt.Println("Накрываю на стол!")
+	fmt.Println("Приветствую, господин", name, "!")
+	fmt.Println("Я принял заказ!")
+	fmt.Println("Я принёс блюдо!")
+	fmt.Println("Не хотите ли вы закзаать что-нибудь еще?")
+	fmt.Println("Хорошего дня!")
+	fmt.Println("")
+}
+
+func hello() {
+
+	fmt.Println("Я функция")
+	fmt.Println("Меня вызвали!")
+	fmt.Println("Я завершаюсь")
+	fmt.Println("")
+}
+
+func aboba() {
+
+	a := 1
+	b := 10
+	c := 3
+
+	fmt.Println("Сумма", a+b+c)
+	fmt.Println("")
+}
+
+func square(x int) {
+
+	fmt.Println("Мы приняли в функции переменную х:", x)
+	fmt.Println("x в квадрате:", x*x)
+
+	/*
+	   import (
+	   	"fmt"
+	   	//"time"
+	   	//"math/rand"
+	   	)
+
+	   func main() {
+
+	   	for i := 1; i <= 5; i ++ {
+	   	fmt.Println("Итерация", i)
+
+	   	if i ==3{
+	   		break
+	   		}
+	   	}
+
+	*/
+	/*
+	   import ("fmt"
+	   	"time"
+	   	"math/rand")
+
+	   func main() {
+
+
+	   //🐤
+	   //🟩
+	   //🟥
+
+	   	score := 0
+
+	   	fmt.Println("Get ready!")
+	   	fmt.Println("Счёт:", score)
+	   	fmt.Println("")
+
+
+	   	for {
+
+	   	fmt.Println("------------------------------")
+	   	fmt.Println("")
+	   	fmt.Println("Подлетаю к трубе!")
+	   		fmt.Println("🐤🟩🟩")
+	   	fmt.Println("")
+
+	   	fmt.Println("Пролетаю через трубу!")
+	   	fmt.Println("🟩🐤🟩")
+	   	fmt.Println("")
+
+	   	if rand.Intn(8) == 1 {
+	   		fmt.Println("Я врезался в трубу :(")
+	   		fmt.Println("🟩🟥🟩")
+	   		fmt.Println("")
+	   		break
+	   	}
+
+	   	fmt.Println("Пролетел через трубу!")
+	   	fmt.Println("🟩 🟩 🐤")
+	   	fmt.Println("")
+
+	   	score++
+	   	fmt.Println("Счёт:", score)
+	   	fmt.Println("------------------------------")
+	   	fmt.Println("")
+	   	time.Sleep(1000 * time.Millisecond)
+	   	}
+
+	   	fmt.Println("Game over!")
+	   	fmt.Println("Ваш итоговый счёт", score)
+	*/
 
 	/*
 	   import (
