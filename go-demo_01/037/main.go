@@ -23,6 +23,7 @@ type User struct {
 	Rating float64 // 0.0 -- 10.0
 }
 
+// Конструктор NewUser - создание нового пользователя с валидацией
 func NewUser(
 	name string,
 	age int,
@@ -30,19 +31,27 @@ func NewUser(
 	isClose bool,
 	rating float64,
 ) User {
+	fmt.Println("Валидирую имя")
 	if name == "" {
+		fmt.Println("Имя не прошло валидацию!")
 		return User{}
 	}
 
+	fmt.Println("Валидирую возраст")
 	if age <= 0 || age >= 150 {
+		fmt.Println("Возраст не прошел валидацию!")
 		return User{}
 	}
 
+	fmt.Println("Валидирую номер телефона")
 	if phoneNumber == "" {
+		fmt.Println("Номер телефона не прошел валидацию!")
 		return User{}
 	}
 
+	fmt.Println("Валидирую рейтинг")
 	if rating < 0.0 || rating > 10.0 {
+		fmt.Println("Рейтинг не прошел валидацию!")
 		return User{}
 	}
 
@@ -95,13 +104,15 @@ func (u *User) RatingDOWN(rating float64) {
 
 func main() {
 
-	user := User{
-		Name:        "Сергей",
-		Age:         64,
-		PhoneNumber: "+7 777 777 77 77",
-		IsClose:     true,
-		Rating:      5.5,
-	}
+	user := NewUser(
+		"Данил",
+		50,
+		"+8 888 888 88 88",
+		false,
+		4.5,
+	)
+
+	fmt.Println("User:", user)
 
 	fmt.Println("Рейтинг до:", user.Rating)
 
