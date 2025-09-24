@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"study/greeting"
 	"study/user"
+
+	"github.com/k0kubun/pp"
 )
 
 func main() {
@@ -19,10 +21,13 @@ func main() {
 	u := user.NewUser("Данил", 50)
 	fmt.Println("Name:", u.GetName())
 	fmt.Println("Age:", u.GetAge())
-	
+
 	u.SetNewName("Алексей")
 	u.SetNewAge(25)
 
 	fmt.Println("Name:", u.GetName())
 	fmt.Println("Age:", u.GetAge())
+	fmt.Println("")
+
+	pp.Println(u)
 }
